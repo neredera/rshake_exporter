@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-User=sensors_exporter
+User=myshake
 WorkingDirectory=/home/myshake/rshake_exporter
 ExecStart=/home/myshake/rshake_exporter/exporter.py
 StandardInput=tty-force

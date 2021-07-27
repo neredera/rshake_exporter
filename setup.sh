@@ -14,8 +14,8 @@ sudo apt-get install git python3-venv python3-pip
 python3 -m pip install prometheus_client PyParsing
 
 # user for service
-sudo useradd -Mr rshake_exporter
-sudo usermod -L rshake_exporter
+#sudo useradd -Mr rshake_exporter
+#sudo usermod -L rshake_exporter
 # usermod -aG root rshake_exporter
 # usermod -aG sudo rshake_exporter
 
