@@ -6,6 +6,8 @@ It is tested with the default Raspberry Shake image (version 0.18).
 
 ## Usage
 
+On the Raspberry Shake:
+
 Clone the repository und install with:
 ```bash
 cd ~
