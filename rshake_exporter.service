@@ -1,0 +1,13 @@
+[Unit]
+Description=Prometheus exporter for Raspberry Shake
+After=multi-user.target
+
+[Service]
+Type=simple
+User=sensors_exporter
+WorkingDirectory=/home/myshake/rshake_exporter
+ExecStart=/home/myshake/rshake_exporter/exporter.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
