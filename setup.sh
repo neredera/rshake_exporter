@@ -4,7 +4,7 @@
 cd "${0%/*}"
 
 # install needed packages
-#sudo apt-get update
+sudo apt-get update
 sudo apt-get install git python3-venv python3-pip
 
 # activate a virtual environment
@@ -14,12 +14,10 @@ sudo apt-get install git python3-venv python3-pip
 python3 -m pip install prometheus_client PyParsing
 
 # user for service
-useradd -Mr rshake_exporter
-usermod -L rshake_exporter
+sudo useradd -Mr rshake_exporter
+sudo usermod -L rshake_exporter
 # usermod -aG root rshake_exporter
 # usermod -aG sudo rshake_exporter
-
-chmod +x exporter.py
 
 # sudo systemctl daemon-reload
 
