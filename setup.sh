@@ -8,7 +8,7 @@ cd "${0%/*}"
 sudo apt-get install git python3-venv python3-pip
 
 # activate a virtual environment
-python3 -m venv .
+#python3 -m venv .
 
 # install python modules
 python3 -m pip install prometheus_client PyParsing
