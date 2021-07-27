@@ -11,14 +11,14 @@ Clone the repository und install with:
 cd ~
 git clone https://github.com/neredera/rshake_exporter.git
 cd rshake_exporter
-.\setup.sh
+./setup.sh
 ```
 
-Enable/disable the sensors you need via:
+Update to the current version:
 ```bash
-nano rshake_exporter.service
-
-sudo systemctl daemon-reload
+cd ~/rshake_exporter
+sudo systemctl stop rshake_exporter.service
+git pull
 sudo systemctl restart rshake_exporter.service
 sudo systemctl status rshake_exporter.service
 ```
