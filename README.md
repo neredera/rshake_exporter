@@ -6,8 +6,9 @@ It is tested with the default Raspberry Shake image (version 0.18).
 
 ## Usage
 
-Clone the respoitory und install with:
+Clone the repository und install with:
 ```bash
+cd ~
 git clone https://github.com/neredera/rshake_exporter.git
 cd rshake_exporter
 .\setup.sh
@@ -50,10 +51,16 @@ Example how to add the exporter to the prometheus configuration (`prometheus.yml
 Some sample metrics:
 
 ```
-# HELP sensor_bmp085_temperature Temperature of pressure sensor bmp085/bmp180 in °C
-# TYPE sensor_bmp085_temperature gauge
-sensor_bmp085_temperature 15.4
-# HELP sensor_bmp085_pressure Pressure of pressure sensor bmp085/bmp180 in hPa
-# TYPE sensor_bmp085_pressure gauge
-sensor_bmp085_pressure 997.08
+# HELP rshake_total_raw_values_total Total samples received
+# TYPE rshake_total_raw_values_total counter
+rshake_total_raw_values_total{channel="SHZ"} 105899.0
+# HELP rshake_max_value Max Raw value in the last integration period
+# TYPE rshake_max_value gauge
+rshake_max_value{channel="SHZ"} 1188.0 1627400663000
+# HELP rshake_min_value Min Raw value in the last integration period
+# TYPE rshake_min_value gauge
+rshake_min_value{channel="SHZ"} 577.0 1627400663000
+# HELP rshake_zero_offset Estimated offset of raw values from zero
+# TYPE rshake_zero_offset gauge
+rshake_zero_offset{channel="SHZ"} 910.4954659333074 1627400663000
 ```
